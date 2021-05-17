@@ -1,5 +1,4 @@
-# CPalms-Spammer
-## server version
+# CPalms-Spammer-Server
 
 Spam like/dislike requests to a CPalms resource.
 
