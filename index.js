@@ -17,21 +17,18 @@ app.get("/go", (req, res) => {
     res.end("Invalid parameters.");
     return;
   }
-  const link = `https://cpalms.org/PreviewResource/LikeResourceVideo?id=${data.id}`;
+  const link = `https://cpalms.org/PreviewResource/LikeResourceVideo?id=${data.id}&LikeUnlike=${data.type}`;
   if (loops[data.id])
     res.end(`<a href="${link}" target="_blank">${data.id}</a> is already being spammed`);
 
   function request() {
     if (!loops[data.id]) return;
-    fetch(reqLink)
-      .then(res => res.json())
-      .then(resData => console.log(`${data.id}: ${resData.LikesCount}`));
+    fetch(link, {mode: 'no-cors'})
+      .then(() => console.log(`success: ${data.id}`));
     setTimeout(request, data.interval);
   }
   
-  const reqLink = `https://cors-anywhere.7ih.repl.co/cpalms.org/PreviewResource/LikeResourceVideo?id=${data.id}&LikeUnlike=${data.type}`;
   loops[data.id] = true;
-
   request();
   res.end(`Spamming ${data.type} requests to <a href="${link}" target="_blank">${data.id}</a>`);
 });
