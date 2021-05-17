@@ -1,4 +1,6 @@
 # CPalms-Spammer
+## server version
+
 Spam like/dislike requests to a CPalms resource.
 
 There are 2 versions.
