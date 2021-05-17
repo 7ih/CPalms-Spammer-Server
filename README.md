@@ -2,6 +2,8 @@
 
 Spam like/dislike requests to a CPalms resource.
 
+Demo: https://replit.com/@7ih/cpalms-spammer-server
+
 There are 2 versions.
 
 * Server: use server resources to send requests (much more efficient)
