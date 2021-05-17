@@ -50,6 +50,6 @@ app.get("/stop", (req, res) => {
   else res.end(`<a href="${link}" target="_blank">${data.id}</a> isn't being spammed`);
 });
 
-app.listen(3000, () => {
+app.listen((process.env.PORT || 3000), () => {
   console.log('server started');
 });
