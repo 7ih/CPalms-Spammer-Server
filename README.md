@@ -5,7 +5,7 @@ Spam like/dislike requests to a CPalms resource.
 There are 2 versions.
 
 * Server: use server resources to send requests (much more efficient)
-* Client: use client device resources to send requests (slightly more convenient)
+* [Client](https://github.com/7ih/CPalms-Spammer-Client/): use client device resources to send requests (slightly more convenient)
 
 ## How to set up
 
