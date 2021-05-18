@@ -9,6 +9,11 @@ There are 2 versions.
 * Server: use server resources to send requests (much more efficient, easily spam multiple CPalms resources)
 * [Client](https://github.com/7ih/CPalms-Spammer-Client/): use client device resources to send requests (easier to set up)
 
+## Recent changes
+
+### 5/18/2021
+All CPalms resource IDs are saved to a database, so if the server restarts, all the saved IDs will be spammed again once the server starts back up.
+
 ## How to set up
 
 1. Download this repository's contents where you want to run it (like a hosting platform, or your device)
