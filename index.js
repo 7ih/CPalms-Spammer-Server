@@ -18,8 +18,10 @@ app.get("/go", (req, res) => {
     return;
   }
   const link = `https://cpalms.org/PreviewResource/LikeResourceVideo?id=${data.id}&LikeUnlike=${data.type}`;
-  if (loops[data.id])
+  if (loops[data.id]) {
     res.end(`<a href="${link}" target="_blank">${data.id}</a> is already being spammed`);
+    return;
+  }
 
   function request() {
     if (!loops[data.id]) return;
@@ -29,8 +31,8 @@ app.get("/go", (req, res) => {
   }
   
   loops[data.id] = true;
-  request();
   res.end(`Spamming ${data.type} requests to <a href="${link}" target="_blank">${data.id}</a>`);
+  request();
 });
 app.get("/stop", (req, res) => {
   const data = url.parse(req.url,true).query;
