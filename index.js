@@ -25,13 +25,13 @@ app.get("/go", (req, res) => {
 
   function request() {
     if (!loops[data.id]) return;
-    fetch(link, {mode: 'no-cors'})
-      .then(() => console.log(`success: ${data.id}`));
+    fetch(link, {mode: 'no-cors'});
     setTimeout(request, data.interval);
   }
   
   loops[data.id] = true;
   res.end(`Spamming ${data.type} requests to <a href="${link}" target="_blank">${data.id}</a>`);
+  console.log(`Spamming ${data.type} requests to ${data.id}`);
   request();
 });
 app.get("/stop", (req, res) => {
