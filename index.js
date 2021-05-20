@@ -13,7 +13,7 @@ let loops = {};
 function spam(data) {
   function req() {
     if (!loops[data.id]) return;
-    fetch(link, {mode: 'no-cors'});
+    fetch(link, {mode: 'no-cors', timeout: 0});
     setTimeout(req, data.interval);
   }
   loops[data.id] = true;
