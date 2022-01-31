@@ -47,4 +47,4 @@ There are then two buttons:
 
 ## Other
 
-The code in this could theoretically be reused for other websites.
+The code in this could theoretically be reused for other websites with a simple URL for like/dislike requests.
