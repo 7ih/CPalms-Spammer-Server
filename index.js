@@ -75,5 +75,3 @@ app.get("/stop", (req, res) => {
 app.listen((process.env.PORT || 3000), () => {
   console.log('server started');
 });
-
-// fun fact: i got the whole database system to work first try. pouchdb is AWESOME
